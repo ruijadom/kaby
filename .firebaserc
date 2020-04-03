@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kanban-ruijadom": {
+      "hosting": {
+        "kaban": [
+          "kanban-ruijadom"
+        ]
+      }
+    }
+  }
+}

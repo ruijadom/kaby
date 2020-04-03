@@ -6,10 +6,10 @@ import * as firebase from 'firebase/app';
   selector: '[appGoogleSignin]'
 })
 export class GoogleSigninDirective {
-  constructor(private auth: AngularFireAuth) {}
+  constructor(private afAuth: AngularFireAuth) {}
 
   @HostListener('click')
   onclick() {
-    this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
 }

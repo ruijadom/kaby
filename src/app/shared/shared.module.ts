@@ -13,27 +13,32 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+const components = [
 
+]
+
+const modules = [
+  CommonModule,
+  RouterModule,
+  MatButtonModule,
+  MatToolbarModule,
+  MatIconModule,
+  LayoutModule,
+  MatSidenavModule,
+  MatListModule,
+  MatMenuModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSnackBarModule
+]
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatIconModule,
-    LayoutModule,
-    MatSidenavModule,
-    MatListModule,
-    MatMenuModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSnackBarModule
-  ],
+  declarations: [...components],
+  imports: [...modules],
   exports: [
-    MatButtonModule
+    ...components,
+    ...modules
   ]
 })
 export class SharedModule { }
